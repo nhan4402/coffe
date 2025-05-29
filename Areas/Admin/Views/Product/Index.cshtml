@@ -1,0 +1,57 @@
+﻿﻿
+@model IEnumerable<ProductModel>
+
+@{
+    ViewData["title"] = "List Product";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h3>List Products</h3>
+
+    <a class="btn btn-primary" asp-action="Create" asp-controller="Product">Add Product</a>
+    <table class="table" id="myTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Product Description</th>
+                <th>Product Price</th>
+                <th>Product Image</th>
+                <th>Product Slug</th>
+                <th>Product Category</th>
+                <th>Product Brand</th>
+                <th>Product Manage</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price.ToString("#,##0 VNĐ")</td>
+                    <td> <img src="~/media/products/@item.Image" width="80px" height="80px" /> </td>
+                    <td>@item.Slug</td>
+                    <td>@item.Category.Name</td>
+                    <td>@item.Brand.Name</td>
+                    <td>
+                        <a class="btn btn-warning btn-sm" asp-action="Edit" asp-controller="Product" asp-route-Id="@item.Id">Edit</a>
+                        <form asp-action="Delete" asp-controller="Product" asp-route-Id="@item.Id" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?')">Delete</button>
+                        </form>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+
+</html>
