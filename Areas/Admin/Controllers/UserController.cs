@@ -10,7 +10,7 @@ namespace Shopping_Coffee.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/User")]
-    [Authorize(Roles = "Admin")]
+   // [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
         private readonly UserManager<AppUserModel> _userManager;
