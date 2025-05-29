@@ -1,0 +1,66 @@
+﻿    ﻿
+    @model IEnumerable<OrderDetails>
+
+    @{
+        ViewData["title"] = "Order Details";
+        int total = 0; // Store total amount
+        int subtotal = 0;
+   
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Order Details</title>
+    </head>
+    <body>
+        <h3>Order Details</h3>
+
+
+        <div class="table table-responsive">
+        <table class="table" id="detail_order">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Order Code</th>
+                    <th>UserName</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+              
+                    
+                </tr>
+            </thead>
+            <tbody>
+           
+                @foreach (var item in Model)
+                {
+                    subtotal = item.Quantity * item.Price; 
+                    total += subtotal; 
+                    <tr>
+                        <input type="hidden" asp-for="@item.Ordercode" class="getId" />
+                        <td>@item.Id</td>
+                        <td>@item.Ordercode</td>
+                        <td>@item.UserName</td>
+                        <td>@item.Product.Name</td>
+                        <td>@item.Price.ToString("#,##0 VNĐ")</td>
+                        <td>@item.Quantity</td>
+                        <td>@subtotal.ToString("#,##0 VNĐ")</td>
+
+                    </tr>
+                }
+                <tr>
+                    <td colspan="6" class="text-end"><strong>Total:</strong></td>
+                    <td><strong>@total.ToString("#,##0 VNĐ")</strong></td>
+                
+                </tr>
+            </tbody>
+        </table>
+   
+        </div>
+    </body>
+
+    </html>
