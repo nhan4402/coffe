@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 using Shopping_Coffee.Repository;
 
 namespace Shopping_Coffee.Controllers
@@ -13,6 +15,16 @@ namespace Shopping_Coffee.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        public async Task<IActionResult> Search(string searchTerm)
+        {
+            var products = await _dataContext.Products
+            .Where(p => p.Name.Contains(searchTerm) || p.Description.Contains(searchTerm))
+            .ToListAsync();
+
+            ViewBag.Keyword = searchTerm;
+
+            return View(products);
         }
         public IActionResult Details(int? Id)
         {
