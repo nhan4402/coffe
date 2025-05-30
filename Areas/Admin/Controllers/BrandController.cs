@@ -13,9 +13,24 @@ namespace Shopping_Coffee.Areas.Admin.Controllers
         {
             _dataContext = context;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index( int page = 1, int limit = 5)
         {
-            return View(await _dataContext.Brands.OrderByDescending(p => p.Id).ToListAsync());
+            List<BrandModel> brandslist = await _dataContext.Brands.ToListAsync();
+            int totalItems = brandslist.Count;
+            int totalPages = (int)Math.Ceiling(totalItems / (double)limit);
+
+            var pageItems = brandslist
+
+                .Skip((page - 1) * limit)
+                .Take(limit)
+                .ToList();
+
+            ViewData["CURENT_PAGE"] = page;
+            ViewData["TOLTAL_PAGE"] = totalPages;
+            ViewData["LIMIT"] = limit;
+
+            return View(pageItems);
+            //return View(await _dataContext.Brands.OrderByDescending(p => p.Id).ToListAsync());
         }
         public IActionResult Create()
         {

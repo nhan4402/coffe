@@ -57,6 +57,39 @@
             }
         </tbody>
     </table>
+    @{
+        int currentPage = Convert.ToInt32(ViewData["CURENT_PAGE"]);
+        int totalPages = Convert.ToInt32(ViewData["TOLTAL_PAGE"]);
+        int limit = Convert.ToInt32(ViewData["LIMIT"]);
+
+
+        string basePath = Url.Action("Index", "Brand", new { area = "Admin" });
+    }
+
+
+    <div>
+        @if (currentPage > 1)
+        {
+            <a href="@($"{basePath}?page={currentPage - 1}&limit={limit}")">Previous</a>
+        }
+        else
+        {
+            <span>Previous</span>
+        }
+
+        <span>@currentPage</span>
+        <span>of</span>
+        <span>@totalPages</span>
+
+        @if (currentPage < totalPages)
+        {
+            <a href="@($"{basePath}?page={currentPage + 1}&limit={limit}")">Next</a>
+        }
+        else
+        {
+            <span>Next</span>
+        }
+    </div>
   
 </body>
 </html>

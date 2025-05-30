@@ -1,4 +1,5 @@
-﻿
+﻿@using System.Net;
+
 
 <div class="row">
 	<div class="col-sm-3">
@@ -48,8 +49,10 @@
 						<input type="text" value="3" />
 						<a class="btn btn-default add-to-cart" asp-action="Add" asp-controller="Cart" asp-route-Id="@Model.Id"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 					</span>
-					
-					<p><b>Đánh giá chung :</b> @Model.Description</p>
+
+					<p><b>Đánh giá chung :</b> 
+						@Html.Raw(WebUtility.HtmlDecode(Model.Description))
+					</p>
 					
 					<a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="" /></a>
 				</div><!--/product-information-->
