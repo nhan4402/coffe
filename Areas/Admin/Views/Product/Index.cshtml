@@ -1,4 +1,5 @@
-﻿﻿
+﻿@using System.Net;
+﻿
 @model IEnumerable<ProductModel>
 
 @{
@@ -36,7 +37,7 @@
                 <tr>
                     <td>@item.Id</td>
                     <td>@item.Name</td>
-                    <td>@item.Description</td>
+                    <td>@Html.Raw(WebUtility.HtmlDecode(item.Description))</td>
                     <td>@item.Price.ToString("#,##0 VNĐ")</td>
                     <td> <img src="~/media/products/@item.Image" width="80px" height="80px" /> </td>
                     <td>@item.Slug</td>
