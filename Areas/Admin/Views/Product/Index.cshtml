@@ -41,8 +41,8 @@
                     <td>@item.Price.ToString("#,##0 VNĐ")</td>
                     <td> <img src="~/media/products/@item.Image" width="80px" height="80px" /> </td>
                     <td>@item.Slug</td>
-                    <td>@item.Category.Name</td>
-                    <td>@item.Brand.Name</td>
+                    <td>@item.Category?.Name</td>
+                    <td>@item.Brand?.Name</td>
                     <td>
                         <a class="btn btn-warning btn-sm" asp-action="Edit" asp-controller="Product" asp-route-Id="@item.Id">Edit</a>
                         <form asp-action="Delete" asp-controller="Product" asp-route-Id="@item.Id" method="post" style="display:inline;">
@@ -53,6 +53,39 @@
             }
         </tbody>
     </table>
+    @{
+        int currentPage = Convert.ToInt32(ViewData["CURENT_PAGE"]);
+        int totalPages = Convert.ToInt32(ViewData["TOLTAL_PAGE"]);
+        int limit = Convert.ToInt32(ViewData["LIMIT"]);
+
+        //http://localhost:21085/Category
+        string basePath = Url.Action("Index", "Product", new { area = "Admin" });
+    }
+
+
+    <div>
+        @if (currentPage > 1)
+        {
+            <a href="@($"{basePath}?page={currentPage - 1}&limit={limit}")">Previous</a>
+        }
+        else
+        {
+            <span>Previous</span>
+        }
+
+        <span>@currentPage</span>
+        <span>of</span>
+        <span>@totalPages</span>
+
+        @if (currentPage < totalPages)
+        {
+            <a href="@($"{basePath}?page={currentPage + 1}&limit={limit}")">Next</a>
+        }
+        else
+        {
+            <span>Next</span>
+        }
+    </div>
 </body>
 
 </html>
