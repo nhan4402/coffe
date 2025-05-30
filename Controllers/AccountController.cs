@@ -29,6 +29,26 @@ namespace Shopping_Coffee.Controllers
         {
             return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
+
+        public async Task<IActionResult> UpdateAccount()
+        {
+            if ((bool)!User.Identity?.IsAuthenticated)
+            {
+
+                return RedirectToAction("Login", "Account");
+            }
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userEmail = User.FindFirstValue(ClaimTypes.Email);
+            var user = await _userManage.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+
+            if (user == null) {
+                return NotFound();
+            }
+
+
+            return View(user);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginVM)
         {

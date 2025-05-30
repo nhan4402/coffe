@@ -305,3 +305,4 @@ D:\Hutech\coffe\obj\Debug\net8.0\refint\Shopping_Coffee.dll
 D:\Hutech\coffe\obj\Debug\net8.0\Shopping_Coffee.pdb
 D:\Hutech\coffe\obj\Debug\net8.0\Shopping_Coffee.genruntimeconfig.cache
 D:\Hutech\coffe\obj\Debug\net8.0\ref\Shopping_Coffee.dll
+C:\Users\admin\source\repos\Shopping_Coffee\Shopping_Coffee\obj\Debug\net8.0\Shopping_Coffee.sourcelink.json

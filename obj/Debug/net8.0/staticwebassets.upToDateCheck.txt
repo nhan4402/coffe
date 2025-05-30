@@ -77,7 +77,13 @@ wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\media\products\19602b0a-778f-4795-965a-7aac65d87434_banhthitbo.jpg
 wwwroot\media\products\210fe8e0-ce4a-40d5-8871-29004a13c29c_caphesuada.jpg
+wwwroot\media\products\284bf030-6780-4201-9f93-a8b8ff108928_cacao-sua-da.jpg
+wwwroot\media\products\3ab98416-1604-415d-b6cd-453c6528a2fe_images (2).jpg
+wwwroot\media\products\53d9cbd9-32aa-4bf2-83ba-a59b1dd80c91_images (1).jpg
 wwwroot\media\products\6621c03c-f307-41da-bd5b-55e7846e6fee_1Capture.PNG
+wwwroot\media\products\6c520df5-83c4-4eab-994f-f4d7ca40c40c_trasua.jpg
 wwwroot\media\products\77e91a86-81f1-41b9-b227-a46974b096fc_stbo.jpg
+wwwroot\media\products\78560d63-9917-4bf4-aeb4-92d2b3dfc11e_images.jpg
 wwwroot\media\products\9382211c-1b43-43ab-8570-253857efe7b8_1Capture.PNG
+wwwroot\media\products\ad141a80-a4fc-466f-b00e-0ffdef1b7e97_photo-1687405624884-16874056251321919681665.jpg
 wwwroot\media\products\b8c67271-1ca8-4a3f-a406-225eb28a4280_1Capture.PNG
