@@ -8,14 +8,34 @@ namespace Shopping_Coffee.Areas.Admin.Controllers
     [Area("Admin")]
     public class CategoryController : Controller
     {
+        private int LIMIT = 5;
+        private static int CURENT_PAGE = 1;
         private readonly DataContext _dataContext;
         public CategoryController(DataContext context)
         {
             _dataContext = context;
         }
-        public async Task<IActionResult> Index()
+
+        public async Task<IActionResult> Index(int page = 1, int limit = 5)
         {
-            return View(await _dataContext.Categories.OrderByDescending(p => p.Id).ToListAsync());
+            List<CategoryModel> tabsList = await _dataContext.Categories.ToListAsync();
+           int totalItems = tabsList.Count;// 10
+            int totalPages = (int)Math.Ceiling(totalItems / (double)limit); // 11/5=2
+
+            // Lấy danh sách theo phân trang
+            var pagedItems = tabsList
+                // 0 
+                .Skip((page - 1) * limit)
+                // 5
+                .Take(limit)
+                .ToList();
+
+            // Gửi sang View qua ViewData (hoặc ViewModel nếu bạn muốn)
+            ViewData["CURENT_PAGE"] = page;
+            ViewData["TOLTAL_PAGE"] = totalPages;
+            ViewData["LIMIT"] = limit;
+
+            return View(pagedItems);
         }
 
         public IActionResult Create()

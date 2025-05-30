@@ -154,7 +154,6 @@ C:\Users\admin\source\repos\Shopping_Coffee\Shopping_Coffee\bin\Debug\net8.0\Mic
 C:\Users\admin\source\repos\Shopping_Coffee\Shopping_Coffee\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\admin\source\repos\Shopping_Coffee\Shopping_Coffee\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Hutech\coffe\bin\Debug\net8.0\appsettings.Development.json
-D:\Hutech\coffe\bin\Debug\net8.0\appsettings.json
 D:\Hutech\coffe\bin\Debug\net8.0\Shopping_Coffee.staticwebassets.runtime.json
 D:\Hutech\coffe\bin\Debug\net8.0\Shopping_Coffee.exe
 D:\Hutech\coffe\bin\Debug\net8.0\Shopping_Coffee.deps.json
@@ -305,3 +304,4 @@ D:\Hutech\coffe\obj\Debug\net8.0\refint\Shopping_Coffee.dll
 D:\Hutech\coffe\obj\Debug\net8.0\Shopping_Coffee.pdb
 D:\Hutech\coffe\obj\Debug\net8.0\Shopping_Coffee.genruntimeconfig.cache
 D:\Hutech\coffe\obj\Debug\net8.0\ref\Shopping_Coffee.dll
+D:\Hutech\coffe\bin\Debug\net8.0\appsettings.json
