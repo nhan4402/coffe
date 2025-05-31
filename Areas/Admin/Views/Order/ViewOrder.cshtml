@@ -55,20 +55,57 @@
                 <tr>
                     <td colspan="6" class="text-end"><strong>Total:</strong></td>
                     <td><strong>@total.ToString("#,##0 VNĐ")</strong></td>
+
+                    <td>
+                        @if (@ViewBag.Status != 3)
+                        {
+                            <select class="form-control select-update-order">
+
+                                <option value="1">Đơn hàng mới</option>
+                                <option value="0">Đơn hàng đã được xử lý</option>
+
+
+                            </select>
+                        }
+                    </td>
                 
                 </tr>
             </tbody>
         </table>
    
         </div>
-    <script>
-            let table = new DataTable('#myTable', {
-        layout: {
-            topStart: {
-                buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
-            }
-        });
-    </script>
+    @section Scripts {
+       
+        <script>
+            $(document).ready(function () {
+                $('.select-update-order').change(function () {
+                    var status = $(this).val();
+                    var ordercode = $('.getId').val(); 
+                   
+
+                    $.ajax({
+                        type: "POST",
+                        url: "@Url.Action("UpdateOrder")",
+                        data: { status: status, ordercode: ordercode }, 
+
+                        success: function (result) {
+                           
+                            if (result.success) {
+
+                                Swal.fire("Cập nhật đơn hàng thành công.");
+                            } else {
+
+                                Swal.fire("Cập nhật đơn hàng thất bại." + result.message);
+
+                            }
+                        }
+
+                    });
+                });
+            });
+        </script>
+    }
+
     </body>
 
     </html>
