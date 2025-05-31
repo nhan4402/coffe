@@ -6,6 +6,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>Home | E-Shopper</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link href="~/css/bootstrap.min.css" rel="stylesheet">
 	<link href="~/css/font-awesome.min.css" rel="stylesheet">
 	<link href="~/css/prettyPhoto.css" rel="stylesheet">
@@ -41,12 +42,18 @@
 					</div>
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<ul class="nav navbar-nav d-flex gap-2 align-items-center justify-content-center">
+								<li><a href="#">
+										<i class="fa-brands fa-facebook"></i>
+									</a>
+								</li>
+								<li><a href="#">
+										<i class="fa-brands fa-twitter"></i>
+									</a>
+								</li>
+								<li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -61,29 +68,6 @@
 					<div class="col-sm-4">
 						<div class="logo pull-left">
 							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
-						</div>
-						<div class="btn-group pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									USA
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canada</a></li>
-									<li><a href="#">UK</a></li>
-								</ul>
-							</div>
-
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									DOLLAR
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canadian Dollar</a></li>
-									<li><a href="#">Pound</a></li>
-								</ul>
-							</div>
 						</div>
 					</div>
 					<div class="col-sm-8">
@@ -257,13 +241,13 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe1.png" alt="" />
+										<img src="images/phuclongg.jpg" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
+								<p>Phúc Long</p>
 								<h2>24 DEC 2014</h2>
 							</div>
 						</div>
@@ -272,13 +256,13 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe2.png" alt="" />
+										<img src="images/toco.jpg" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
+								<p>TocoToco</p>
 								<h2>24 DEC 2014</h2>
 							</div>
 						</div>
@@ -287,13 +271,13 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe3.png" alt="" />
+										<img src="images/trungnguyen.jpg" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
+								<p>Trung Nguyên</p>
 								<h2>24 DEC 2014</h2>
 							</div>
 						</div>
@@ -302,13 +286,13 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe4.png" alt="" />
+										<img src="images/gongcha.jpg" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
+								<p>Gong Cha</p>
 								<h2>24 DEC 2014</h2>
 							</div>
 						</div>
@@ -408,6 +392,7 @@
 	<script src="~/js/price-range.js"></script>
 	<script src="~/js/jquery.prettyPhoto.js"></script>
 	<script src="~/js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pIsMEoN/ZyajNBCbERoYYZPo46pnfZSAjMM6vpuf5Go=",
+  "Hash": "xZHoVtuOR4Uv0g3zzdgrpIuRKknv/G84AaIipOZcR9w=",
   "Source": "Shopping_Coffee",
   "BasePath": "_content/Shopping_Coffee",
   "Mode": "Default",
@@ -207,12 +207,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Hutech\\coffe\\wwwroot\\images\\1.PNG",
+      "Identity": "D:\\Hutech\\coffe\\wwwroot\\images\\gongcha.jpg",
       "SourceId": "Shopping_Coffee",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Hutech\\coffe\\wwwroot\\",
       "BasePath": "_content/Shopping_Coffee",
-      "RelativePath": "images/1.PNG",
+      "RelativePath": "images/gongcha.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -223,15 +223,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\1.PNG"
+      "OriginalItemSpec": "wwwroot\\images\\gongcha.jpg"
     },
     {
-      "Identity": "D:\\Hutech\\coffe\\wwwroot\\images\\2.PNG",
+      "Identity": "D:\\Hutech\\coffe\\wwwroot\\images\\phuclongg.jpg",
       "SourceId": "Shopping_Coffee",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Hutech\\coffe\\wwwroot\\",
       "BasePath": "_content/Shopping_Coffee",
-      "RelativePath": "images/2.PNG",
+      "RelativePath": "images/phuclongg.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -242,15 +242,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\2.PNG"
+      "OriginalItemSpec": "wwwroot\\images\\phuclongg.jpg"
     },
     {
-      "Identity": "D:\\Hutech\\coffe\\wwwroot\\images\\3.jpg",
+      "Identity": "D:\\Hutech\\coffe\\wwwroot\\images\\toco.jpg",
       "SourceId": "Shopping_Coffee",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Hutech\\coffe\\wwwroot\\",
       "BasePath": "_content/Shopping_Coffee",
-      "RelativePath": "images/3.jpg",
+      "RelativePath": "images/toco.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -261,7 +261,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\3.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\toco.jpg"
+    },
+    {
+      "Identity": "D:\\Hutech\\coffe\\wwwroot\\images\\trungnguyen.jpg",
+      "SourceId": "Shopping_Coffee",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Hutech\\coffe\\wwwroot\\",
+      "BasePath": "_content/Shopping_Coffee",
+      "RelativePath": "images/trungnguyen.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\trungnguyen.jpg"
     },
     {
       "Identity": "D:\\Hutech\\coffe\\wwwroot\\js\\bootstrap.min.js",
@@ -1594,6 +1613,25 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\3ab98416-1604-415d-b6cd-453c6528a2fe_images (2).jpg"
     },
     {
+      "Identity": "D:\\Hutech\\coffe\\wwwroot\\media\\products\\523e69b3-d837-4e68-867c-633dc4631e33_imgl8466-4680.jpg",
+      "SourceId": "Shopping_Coffee",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Hutech\\coffe\\wwwroot\\",
+      "BasePath": "_content/Shopping_Coffee",
+      "RelativePath": "media/products/523e69b3-d837-4e68-867c-633dc4631e33_imgl8466-4680.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\products\\523e69b3-d837-4e68-867c-633dc4631e33_imgl8466-4680.jpg"
+    },
+    {
       "Identity": "D:\\Hutech\\coffe\\wwwroot\\media\\products\\53d9cbd9-32aa-4bf2-83ba-a59b1dd80c91_images (1).jpg",
       "SourceId": "Shopping_Coffee",
       "SourceType": "Discovered",
@@ -1706,6 +1744,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\media\\products\\9382211c-1b43-43ab-8570-253857efe7b8_1Capture.PNG"
+    },
+    {
+      "Identity": "D:\\Hutech\\coffe\\wwwroot\\media\\products\\99197c2f-cb7c-46c6-85a2-f1f7116ac766_mango-1.jpg",
+      "SourceId": "Shopping_Coffee",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Hutech\\coffe\\wwwroot\\",
+      "BasePath": "_content/Shopping_Coffee",
+      "RelativePath": "media/products/99197c2f-cb7c-46c6-85a2-f1f7116ac766_mango-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\products\\99197c2f-cb7c-46c6-85a2-f1f7116ac766_mango-1.jpg"
     },
     {
       "Identity": "D:\\Hutech\\coffe\\wwwroot\\media\\products\\ad141a80-a4fc-466f-b00e-0ffdef1b7e97_photo-1687405624884-16874056251321919681665.jpg",

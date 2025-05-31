@@ -37,16 +37,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Hutech\\coffe\\wwwroot\\images\\1.PNG",
-      "PackagePath": "staticwebassets\\images\\1.PNG"
+      "Id": "D:\\Hutech\\coffe\\wwwroot\\images\\gongcha.jpg",
+      "PackagePath": "staticwebassets\\images\\gongcha.jpg"
     },
     {
-      "Id": "D:\\Hutech\\coffe\\wwwroot\\images\\2.PNG",
-      "PackagePath": "staticwebassets\\images\\2.PNG"
+      "Id": "D:\\Hutech\\coffe\\wwwroot\\images\\phuclongg.jpg",
+      "PackagePath": "staticwebassets\\images\\phuclongg.jpg"
     },
     {
-      "Id": "D:\\Hutech\\coffe\\wwwroot\\images\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\3.jpg"
+      "Id": "D:\\Hutech\\coffe\\wwwroot\\images\\toco.jpg",
+      "PackagePath": "staticwebassets\\images\\toco.jpg"
+    },
+    {
+      "Id": "D:\\Hutech\\coffe\\wwwroot\\images\\trungnguyen.jpg",
+      "PackagePath": "staticwebassets\\images\\trungnguyen.jpg"
     },
     {
       "Id": "D:\\Hutech\\coffe\\wwwroot\\js\\bootstrap.min.js",
@@ -329,6 +333,10 @@
       "PackagePath": "staticwebassets\\media\\products\\3ab98416-1604-415d-b6cd-453c6528a2fe_images (2).jpg"
     },
     {
+      "Id": "D:\\Hutech\\coffe\\wwwroot\\media\\products\\523e69b3-d837-4e68-867c-633dc4631e33_imgl8466-4680.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\523e69b3-d837-4e68-867c-633dc4631e33_imgl8466-4680.jpg"
+    },
+    {
       "Id": "D:\\Hutech\\coffe\\wwwroot\\media\\products\\53d9cbd9-32aa-4bf2-83ba-a59b1dd80c91_images (1).jpg",
       "PackagePath": "staticwebassets\\media\\products\\53d9cbd9-32aa-4bf2-83ba-a59b1dd80c91_images (1).jpg"
     },
@@ -351,6 +359,10 @@
     {
       "Id": "D:\\Hutech\\coffe\\wwwroot\\media\\products\\9382211c-1b43-43ab-8570-253857efe7b8_1Capture.PNG",
       "PackagePath": "staticwebassets\\media\\products\\9382211c-1b43-43ab-8570-253857efe7b8_1Capture.PNG"
+    },
+    {
+      "Id": "D:\\Hutech\\coffe\\wwwroot\\media\\products\\99197c2f-cb7c-46c6-85a2-f1f7116ac766_mango-1.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\99197c2f-cb7c-46c6-85a2-f1f7116ac766_mango-1.jpg"
     },
     {
       "Id": "D:\\Hutech\\coffe\\wwwroot\\media\\products\\ad141a80-a4fc-466f-b00e-0ffdef1b7e97_photo-1687405624884-16874056251321919681665.jpg",
