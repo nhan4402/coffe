@@ -46,7 +46,7 @@ namespace Shopping_Coffee.Controllers
 
                 }
                 HttpContext.Session.Remove("Cart");
-                TempData["sucess"] = "Đã tạo";
+                TempData["success"] = "Đã đặt hàng thành công";
                 return RedirectToAction("Index", "Cart");
 
 

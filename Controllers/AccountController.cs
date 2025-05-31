@@ -81,6 +81,7 @@ namespace Shopping_Coffee.Controllers
                 Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(loginVM.Username, loginVM.Password, false, false);
                 if(result.Succeeded)
                 {
+                    TempData["success"] = "Đăng nhập thành công ";
                     return Redirect(loginVM.ReturnUrl ?? "/");
                 }
                 ModelState.AddModelError("", "Invalid username or password");
@@ -131,6 +132,7 @@ namespace Shopping_Coffee.Controllers
         {
             await _signInManager.SignOutAsync();
             await HttpContext.SignOutAsync();
+            TempData["success"] = "Đăng xuất thành công";
             return Redirect(returnUrl);
         }
     }

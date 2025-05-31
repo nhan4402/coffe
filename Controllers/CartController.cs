@@ -45,8 +45,8 @@ namespace Shopping_Coffee.Controllers
             }
 
             HttpContext.Session.SetJson("Cart", cart);
+            TempData["success"] = "Thêm vào giỏ hàng thành công";
 
-           
             return Redirect(Request.Headers["Referer"].ToString());
         }
         public async Task<IActionResult> Decrease(int Id)
@@ -70,7 +70,7 @@ namespace Shopping_Coffee.Controllers
                 HttpContext.Session.SetJson("Cart", cart);
             }
 
-            TempData["success"] = "Decrease Product to cart Sucessfully! ";
+            TempData["success"] = "Tăng thành công ";
             return RedirectToAction("Index");
         }
         public async Task<IActionResult> Increase(int Id)
@@ -94,7 +94,7 @@ namespace Shopping_Coffee.Controllers
                 HttpContext.Session.SetJson("Cart", cart);
             }
 
-            TempData["success"] = "Decrease Product to cart Sucessfully! ";
+            TempData["success"] = "Giảm thành công ";
             return RedirectToAction("Index");
         }
         public async Task<IActionResult> Remove(int Id)
@@ -110,14 +110,14 @@ namespace Shopping_Coffee.Controllers
                 HttpContext.Session.SetJson("Cart", cart);
             }
 
-            
+            TempData["success"] = "Xóa thành công";
             return RedirectToAction("Index");
         }
         public async Task<IActionResult> Clear()
         {
             HttpContext.Session.Remove("Cart");
+            TempData["success"] = "Xóa thành công";
 
-            
             return RedirectToAction("Index");
         }
     }
