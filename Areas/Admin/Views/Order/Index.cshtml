@@ -73,29 +73,51 @@
         string basePath = Url.Action("Index", "Order", new { area = "Admin" });
     }
 
+    <div class="d-flex justify-content-center align-items-center my-3">
+        <nav>
+            <ul class="pagination mb-0">
+                @if (currentPage > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@($"{basePath}?page={currentPage - 1}&limit={limit}")" aria-label="Previous">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled">
+                        <span class="page-link" aria-label="Previous">
+                            <i class="fa fa-angle-left"></i>
+                        </span>
+                    </li>
+                }
 
-    <div>
-        @if (currentPage > 1)
-        {
-            <a href="@($"{basePath}?page={currentPage - 1}&limit={limit}")">Previous</a>
-        }
-        else
-        {
-            <span>Previous</span>
-        }
+                <li class="page-item disabled">
+                    <span class="page-link">@currentPage of @totalPages</span>
+                </li>
 
-        <span>@currentPage</span>
-        <span>of</span>
-        <span>@totalPages</span>
+                @if (currentPage < totalPages)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@($"{basePath}?page={currentPage + 1}&limit={limit}")" aria-label="Next">
+                            <i class="fa fa-angle-right"></i>
 
-        @if (currentPage < totalPages)
-        {
-            <a href="@($"{basePath}?page={currentPage + 1}&limit={limit}")">Next</a>
-        }
-        else
-        {
-            <span>Next</span>
-        }
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled">
+                        <span class="page-link" aria-label="Next">
+                            <i class="fa fa-angle-right"></i>
+                        </span>
+                    </li>
+                }
+            </ul>
+        </nav>
+
+
     </div>
    
 </body>
