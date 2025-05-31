@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Shopping_Coffee.Models;
 using Shopping_Coffee.Repository;
 
@@ -16,13 +17,30 @@ namespace Shopping_Coffee.Controllers
             _dataContext = context;
         }
 
-        public IActionResult Index()
-        {
-            var products = _dataContext.Products.ToList();  
-            return View(products);
-        }
+		public async Task<IActionResult> Index(int page = 1, int limit = 6)
+		{
+			List<ProductModel> productslist = await _dataContext.Products
+				.Include(p => p.Category)
+				.Include(p => p.Brand)
+				.ToListAsync();
 
-        public IActionResult Privacy()
+			int totalItems = productslist.Count;
+			int totalPages = (int)Math.Ceiling(totalItems / (double)limit);
+			var pageItems = productslist
+
+				.Skip((page - 1) * limit)
+				.Take(limit)
+				.ToList();
+
+			ViewData["CURENT_PAGE"] = page;
+			ViewData["TOLTAL_PAGE"] = totalPages;
+			ViewData["LIMIT"] = limit;
+			ViewData["total"] = totalItems;
+
+			return View(pageItems);
+		}
+
+		public IActionResult Privacy()
         {
             return View();
         }

@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Hutech\\coffe\\wwwroot\\images\\eshopper.png",
+      "PackagePath": "staticwebassets\\images\\eshopper.png"
+    },
+    {
       "Id": "D:\\Hutech\\coffe\\wwwroot\\images\\gongcha.jpg",
       "PackagePath": "staticwebassets\\images\\gongcha.jpg"
     },
