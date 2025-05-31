@@ -1,4 +1,5 @@
-﻿<div class="row">
+﻿﻿@using System.Net;
+<div class="row">
     <div class="col-sm-3">
         @Html.Partial("_SidebarPartial")
     </div>
@@ -39,7 +40,7 @@
                             <i class="fa fa-shopping-cart"></i>Thêm vào giỏ
                         </a>
                     </span>
-                    <p><b>Đánh giá chung:</b> @Model.Description</p>
+                    <p><b>Đánh giá chung:</b> @Html.Raw(WebUtility.HtmlDecode(Model.Description))</p>
                     <a href="#"><img src="images/product-details/share.png" class="share img-responsive" alt="" /></a>
                 </div>
             </div>
