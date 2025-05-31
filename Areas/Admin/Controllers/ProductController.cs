@@ -93,7 +93,7 @@ namespace Shopping_Coffee.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(ProductModel product)
         {
-            var existed_product = await _dataContext.Products.FindAsync(product.Id); // ✅ Sửa lại với await
+            var existed_product = await _dataContext.Products.FindAsync(product.Id); 
             if (existed_product == null)
             {
                 return NotFound();
@@ -119,7 +119,7 @@ namespace Shopping_Coffee.Areas.Admin.Controllers
                     existed_product.Image = imageName;
                 }
 
-                // Cập nhật các trường khác
+             
                 existed_product.Name = product.Name;
                 existed_product.Description = product.Description;
                 existed_product.Price = product.Price;
