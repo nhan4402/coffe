@@ -26,11 +26,17 @@ namespace Shopping_Coffee.Controllers
 
             return View(products);
         }
-        public IActionResult Details(int? Id)
+        public async Task<IActionResult> Details(long Id)
         {
             if (Id == null) return RedirectToAction("Index");
 
-            var productsById = _dataContext.Products.FirstOrDefault(p => p.Id == Id);
+            var productsById = _dataContext.Products.Where(p => p.Id == Id).FirstOrDefault();
+
+            var relatedProducts = await _dataContext.Products
+            .Where( p => p.CategoryId == productsById.CategoryId && p.Id != productsById.Id )
+            .Take(4)
+            .ToListAsync();
+            ViewBag.RelatedProducts = relatedProducts;
             return View(productsById);
         }
 
