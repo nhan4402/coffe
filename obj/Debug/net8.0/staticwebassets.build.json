@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xZHoVtuOR4Uv0g3zzdgrpIuRKknv/G84AaIipOZcR9w=",
+  "Hash": "+ezk/faEXNM6mYxZpN+I8XpWUvYB+B/YGFcJfcLVtFA=",
   "Source": "Shopping_Coffee",
   "BasePath": "_content/Shopping_Coffee",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Hutech\\coffe\\wwwroot\\images\\eshopper.png",
+      "SourceId": "Shopping_Coffee",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Hutech\\coffe\\wwwroot\\",
+      "BasePath": "_content/Shopping_Coffee",
+      "RelativePath": "images/eshopper.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\eshopper.png"
     },
     {
       "Identity": "D:\\Hutech\\coffe\\wwwroot\\images\\gongcha.jpg",

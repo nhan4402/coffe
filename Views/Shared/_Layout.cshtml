@@ -42,7 +42,7 @@
 					</div>
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
-							<ul class="nav navbar-nav d-flex gap-2 align-items-center justify-content-center">
+							<ul class="nav navbar-nav d-flex flex-row gap-2 align-items-center justify-content-center">
 								<li><a href="#">
 										<i class="fa-brands fa-facebook"></i>
 									</a>
@@ -64,15 +64,15 @@
 		<div class="header-middle">
 			<!--header-middle-->
 			<div class="container">
-				<div class="row">
+				<div style="display: flex; align-items: center; justify-content: center;">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+							<a href="index.html"><img style="object-fit: cover; width:120px; height: 120px;;" src="/images/eshopper.png" alt="" /></a>
 						</div>
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
-							<ul class="nav navbar-nav">
+							<ul class="nav navbar-nav d-flex flex-row">
 
 
 								<li><a asp-action="Index" asp-controller="Cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
@@ -114,7 +114,7 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a asp-controller="Home" class="active">Home</a></li>
+								<li><a href="/" class="active">Home</a></li>
 								<li class="dropdown">
 									<a asp-controller="Product" asp-action="Index">Shop<i class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
@@ -376,8 +376,8 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+					<p class="pull-left">Copyright © 2025 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="#">Nhom 18</a></span></p>
 				</div>
 			</div>
 		</div>
@@ -386,13 +386,14 @@
 
 
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="~/js/jquery.js"></script>
 	<script src="~/js/bootstrap.min.js"></script>
 	<script src="~/js/jquery.scrollUp.min.js"></script>
 	<script src="~/js/price-range.js"></script>
 	<script src="~/js/jquery.prettyPhoto.js"></script>
 	<script src="~/js/main.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

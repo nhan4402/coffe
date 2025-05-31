@@ -8,7 +8,7 @@ namespace Shopping_Coffee.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/Role")]
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
 
