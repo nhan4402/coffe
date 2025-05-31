@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Shopping_Coffee.Models;
 using Shopping_Coffee.Repository;
 
 [Area("Admin")]
@@ -16,9 +17,22 @@ public class OrderController : Controller
 
     [HttpGet]
     [Route("")]
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(int page = 1, int limit = 5)
     {
-        return View(await _dataContext.Orders.OrderByDescending(p => p.Id).ToListAsync());
+        List<OrderModel> ordersList = await _dataContext.Orders.ToListAsync();
+        int totalItems = ordersList.Count;
+        int totalPages = (int)Math.Ceiling(totalItems / (double)limit); 
+        var pagedItems = ordersList
+           
+            .Skip((page - 1) * limit)
+            .Take(limit)
+            .ToList();
+
+        ViewData["CURENT_PAGE"] = page;
+        ViewData["TOLTAL_PAGE"] = totalPages;
+        ViewData["LIMIT"] = limit;
+
+        return View(pagedItems);
     }
 
     [HttpGet]

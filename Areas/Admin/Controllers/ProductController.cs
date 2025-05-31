@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Shopping_Coffee.Models;
 using Shopping_Coffee.Repository;
+using System.Collections.Generic;
 
 namespace Shopping_Coffee.Areas.Admin.Controllers
 {
@@ -17,9 +18,26 @@ namespace Shopping_Coffee.Areas.Admin.Controllers
             _dataContext = context;
             _webHostEnviroment = webHostEnviroment;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1, int limit = 5)
         {
-            return View(await _dataContext.Products.OrderByDescending(p => p.Id).Include(c => c.Category).Include(b => b.Brand).ToListAsync());
+            List<ProductModel> productslist = await _dataContext.Products
+                .Include(p => p.Category)
+                .Include(p => p.Brand)
+                .ToListAsync();
+
+            int totalItems = productslist.Count;
+            int totalPages = (int)Math.Ceiling(totalItems / (double)limit);
+            var pageItems = productslist
+
+                .Skip((page - 1) * limit)
+                .Take(limit)
+                .ToList();
+
+            ViewData["CURENT_PAGE"] = page;
+            ViewData["TOLTAL_PAGE"] = totalPages;
+            ViewData["LIMIT"] = limit;
+
+            return View(pageItems);
         }
         public IActionResult Create()
         {
