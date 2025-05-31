@@ -48,7 +48,52 @@ namespace Shopping_Coffee.Controllers
 
             return View(user);
         }
+       
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateinfoAccount(AppUserModel user)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userbyId = await _userManage.Users.FirstOrDefaultAsync(u => u.Id == userId);
 
+            if (userbyId == null)
+            {
+                return NotFound();
+            }
+
+           
+            userbyId.Email = user.Email;
+            userbyId.PhoneNumber = user.PhoneNumber;
+            userbyId.occupation = user.occupation;
+
+            _dataContext.Update(userbyId);
+            await _dataContext.SaveChangesAsync();
+
+            TempData["success"] = "Cập nhật thành công";
+            return RedirectToAction("UpdateAccount", "Account");
+        }
+
+        //public async Task<IActionResult> UpdateinfoAccount(AppUserModel user)
+        //{
+
+        //    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        //    var userbyId = await _userManage.Users.FirstOrDefaultAsync(u => u.Id == userId);
+
+        //    if (userbyId == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    else
+        //    {
+        //        _dataContext.Update(userbyId);
+        //        await _dataContext.SaveChangesAsync();
+        //        TempData["success"] = "Cập nhật thành công";
+        //    }
+
+
+        //    return RedirectToAction("UpdateAccount", "Account");
+        //}
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginVM)
         {
