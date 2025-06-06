@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using Shopping_Coffee.Areas.Admin.Repository;
 using Shopping_Coffee.Models;
 using Shopping_Coffee.Repository;
 using System.Security.Claims;
@@ -10,10 +11,14 @@ namespace Shopping_Coffee.Controllers
     public class CheckoutController : Controller
     {
         private readonly DataContext _dataContext;
-        public CheckoutController(DataContext context)
+        private readonly IEmailSender _emailSender;
+        public CheckoutController(IEmailSender emailSender, DataContext context )
         {
             _dataContext = context;
+            _emailSender = emailSender;
+
         }
+    
         public async Task<IActionResult> Checkout()
         {
             var userEmail = User.FindFirstValue(ClaimTypes.Email);
@@ -46,6 +51,13 @@ namespace Shopping_Coffee.Controllers
 
                 }
                 HttpContext.Session.Remove("Cart");
+                // send mail oder 
+                var receiver = userEmail;
+                var subject = "Đặt hàng thành công";
+                var message = "Đặt hàng thành công, cảm ơn vì trải nghiệm dịch vụ nhé.";
+
+                await _emailSender.SendEmailAsync(receiver, subject, message);
+
                 TempData["sucess"] = "Đã tạo";
                 return RedirectToAction("Index", "Cart");
 

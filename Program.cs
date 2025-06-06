@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Shopping_Coffee.Areas.Admin.Repository;
 using Shopping_Coffee.Models;
 using Shopping_Coffee.Repository;
 
@@ -10,6 +11,8 @@ builder.Services.AddDbContext<DataContext>(Options =>
 {
     Options.UseSqlServer(builder.Configuration["ConnectionStrings:DbConnection"]);
 });
+//Add Email Sender
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDistributedMemoryCache();
