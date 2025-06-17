@@ -283,6 +283,34 @@ namespace Shopping_Coffee.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Shopping_Coffee.Models.MomoInfoModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("DatePaid")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FullName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrderId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrderInfo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MomoInfoModels");
+                });
+
             modelBuilder.Entity("Shopping_Coffee.Models.OrderDetails", b =>
                 {
                     b.Property<int>("Id")
@@ -325,6 +353,9 @@ namespace Shopping_Coffee.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Ordercode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentMethod")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")

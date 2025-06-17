@@ -27,6 +27,7 @@
                 <th>Order Code</th>           
                 <th>UserName</th>
                 <th>Order Status</th>
+                <th>Paymet Method</th>
                 <th>Created Date</th>
                 <th>Action</th>
             </tr>
@@ -46,7 +47,7 @@
                         }
                         else if (item.Status == 2)
                         {
-                            <span class="text text-success">Đã giao hàng</span>
+                            <span class="text text-success">Đơn hàng mới</span>
                         }
                         else
                         {
@@ -54,10 +55,23 @@
                             <span class="text text-danger">Đã hủy</span>
                         }
                     </td>
-                    <td>@item.CreatedDate.ToString("dd-MM-yyyy")</td>
                     <td>
-                        <a class="btn btn-warning btn-sm" asp-action="ViewOrder" asp-controller="Order" asp-route-ordercode="@item.Ordercode">View Order</a>
-                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-controller="Order" asp-route-ordercode="@item.Ordercode">Delete</a>
+                        @if (item.PaymentMethod == "COD" || item.PaymentMethod == null)
+                        {
+                            <span class="text text-primary">Tiền mặt</span>
+                        }
+                        else
+                        {
+                            <span class="text text-primary">Qua MOMO <a asp-route-orderId="@item.PaymentMethod " asp-action ="PaymentMomoInfo" asp-controller="Order"></a>@item.PaymentMethod</span>
+                        }
+                    </td>
+                    <td>
+                        @item.CreatedDate.ToString("dd-MM-yyyy HH:mm:ss")
+                    <td>
+                        <a class="btn btn-warning btn-sm" asp-action="ViewOrder" asp-controller="Order" asp-route-id="@item.Id">View Order</a>
+                        <form asp-action="Delete" asp-controller="Order" asp-route-ordercode="@item.Ordercode" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa đơn hàng này?');">Delete</button>
+                        </form>
                        
                     </td>
                 </tr>

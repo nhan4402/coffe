@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9BHVd4ql4JJmLcoXgsAaY9i9qpyUUaoB5V3/z/2R4JqLs+aOgICnb+DAS93kczypyc0s8CPWaO3qFbyA/PRWNQ==",
+  "dgSpecHash": "ftzB8V16CtUUoas2JlboAcFmNHj4QO9xGf9ihf8R6WZKytWpLFhVupLfKsKU99JbOOqrfHpYyYbZ/F845dXKLg==",
   "success": true,
   "projectFilePath": "D:\\Hutech\\coffe\\Shopping_Coffee.csproj",
   "expectedPackageFiles": [
@@ -52,6 +52,7 @@
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

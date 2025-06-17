@@ -1,0 +1,15 @@
+﻿  @model Shopping_Coffee.Models.Momo.MomoExecuteResponseModel
+   @{
+        ViewData["title"] = "Kết quả thanh toán thành công";
+
+    }
+<div class="alert alert-success mt-4">
+    <h4> Thanh toán MOMO thành công!</h4>
+    <hr />
+    <p><strong>Order ID:</strong> @Model.OrderId</p>
+    <p><strong>Order Info:</strong> @Model.OrderInfo</p>
+    <p><strong>Tổng tiền:</strong> @String.Format("{0:N0}", @Model.Amount) VNĐ</p>
+    <button class="btn btn-primary" onclick="location.href='@Url.Action("History", "Account")'">
+        Xem lịch sử đặt hàng
+    </button>
+</div>

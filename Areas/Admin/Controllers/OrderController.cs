@@ -37,13 +37,15 @@ public class OrderController : Controller
 
     [HttpGet]
     [Route("ViewOrder")]
-    public async Task<IActionResult> ViewOrder(string ordercode)
+    public async Task<IActionResult> ViewOrder(int id)
     {
-        var DetailsOrder = await _dataContext.OrderDetails.Include(od => od.Product)
-            .Where(od => od.Ordercode == ordercode).ToListAsync();
 
-        var Order = _dataContext.Orders.FirstOrDefault(o => o.Ordercode == ordercode);
+        var Order = _dataContext.Orders.FirstOrDefault(o => o.Id == id);
         if (Order == null) return NotFound();
+
+        var DetailsOrder = await _dataContext.OrderDetails.Where(od => od.Id == id).Include(od => od.Product)
+           .ToListAsync();
+
 
         ViewBag.Status = Order.Status;
         return View(DetailsOrder);

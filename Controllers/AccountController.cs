@@ -170,5 +170,27 @@ namespace Shopping_Coffee.Controllers
             await HttpContext.SignOutAsync();
             return Redirect(returnUrl);
         }
+		[HttpPost]
+		public IActionResult CancelOrder(int id)
+		{
+			var order = _dataContext.Orders.FirstOrDefault(o => o.Id == id);
+			if (order != null && (order.Status == 1 || order.Status == 2))
+			{
+				// Xóa chi tiết đơn hàng trước (nếu có)
+				var orderDetails = _dataContext.OrderDetails.Where(od => od.Ordercode == order.Ordercode).ToList();
+				if (orderDetails.Any())
+				{
+					_dataContext.OrderDetails.RemoveRange(orderDetails);
+				}
+				_dataContext.Orders.Remove(order);
+				_dataContext.SaveChanges();
+				TempData["success"] = "Đã xóa đơn hàng thành công!";
+			}
+			else
+			{
+				TempData["error"] = "Không thể xóa đơn hàng này!";
+			}
+			return RedirectToAction("History");
+		}
     }
 }

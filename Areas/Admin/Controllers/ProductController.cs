@@ -111,7 +111,7 @@ namespace Shopping_Coffee.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(ProductModel product)
         {
-            var existed_product = await _dataContext.Products.FindAsync(product.Id); // ✅ Sửa lại với await
+            var existed_product = await _dataContext.Products.FindAsync(product.Id); 
             if (existed_product == null)
             {
                 return NotFound();
