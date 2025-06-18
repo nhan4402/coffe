@@ -6,5 +6,7 @@ namespace Shopping_Coffee.Models
     {
         public string occupation {  get; set; }
         public string RoleId { get; set; }
-    }
+
+		public string Token { get; set; }
+	}
 }

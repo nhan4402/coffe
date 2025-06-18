@@ -11,19 +11,20 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-   
+
 </head>
 <body>
-    <h3>List Orders History:</h3>
+    <h3>List Orders History placed by: @ViewBag.UserEmail</h3>
 
     <table class="table" id="myTable">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Order Code</th>        
-                <th>UserName</th>              
+                <th>UserName</th>
+                <th>Order Status</th>
+                <th>Payment Method</th>
                 <th>Created Date</th>
-                
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -31,10 +32,50 @@
             {
                 <tr>
                     <td>@item.Id</td>
-                    <td>@item.Ordercode</td>                  
-                    <td>@item.UserName</td>                  
-                    <td>@item.CreatedDate.ToString("dd-MM-yyyy")</td>
-                  
+ 
+                    <td>@item.UserName</td>
+                    <td>
+                        @if (item.Status == 1 || item.Status == 2)
+                        {
+                            <span class="text text-success">Đơn hàng mới</span>
+                        }
+                        else if (item.Status == 0)
+                        {
+                            <span class="text text-success">Đã giao hàng</span>
+                        }
+                        else
+                        {
+
+                            <span class="text text-danger">Đã hủy</span>
+                        }
+                    </td>
+                    <td>
+                        @if (item.PaymentMethod == "COD" || item.PaymentMethod == null)
+                        {
+                            <span class="text text-primary">Tiền mặt</span>
+                        }
+                        else
+                        {
+                            <span class="text text-primary">Qua MOMO @item.PaymentMethod</span>
+                        }
+                    <td>
+                            @item.CreatedDate.ToString("dd-MM-yyyy HH:mm:ss")
+                    </td>
+                    <td>
+                            @if (item.Status == 1 || item.Status == 2)
+                            {
+                            <form asp-action="CancelOrder" asp-controller="Account" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn xác nhận muốn hủy?')">Hủy đơn hàng</button>
+                            </form>
+                            }
+                            else
+                            {
+                            <span class="text-muted">Không thể hủy</span>
+                            }
+
+
+                    </td>
                 </tr>
             }
         </tbody>

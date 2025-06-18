@@ -305,3 +305,4 @@ D:\Hutech\coffe\obj\Debug\net8.0\Shopping_Coffee.pdb
 D:\Hutech\coffe\obj\Debug\net8.0\Shopping_Coffee.genruntimeconfig.cache
 D:\Hutech\coffe\obj\Debug\net8.0\ref\Shopping_Coffee.dll
 D:\Hutech\coffe\bin\Debug\net8.0\appsettings.json
+D:\Hutech\coffe\bin\Debug\net8.0\RestSharp.dll
